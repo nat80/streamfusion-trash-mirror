@@ -1,12 +1,12 @@
 {
   "slug": "french-hd",
-  "name": "French HD (1080p)",
-  "description": "Priorité aux releases françaises 1080p : VFF/TRUEFRENCH, x264, Bluray/WEB-DL. Idéal pour qualité équilibrée sans 4K.",
+  "name": "French HD",
+  "description": "Profil HD francophone : 1080p de qualité avec préférence pour les groupes français.",
   "is_system": true,
   "config": {
     "scores": {
-      "fr-scene-groups": 2000,
-      "french-lq-groups": -1000,
+      "french-scene": 2000,
+      "french-lq": -1000,
       "x264": 500,
       "x265": 100,
       "1080p": 300,
@@ -15,19 +15,28 @@
       "web-tier-02": 500,
       "remux-tier-01": 1000,
       "remux-tier-02": 700,
-      "hq-audio": 200,
-      "hq-release-groups": 400,
+      "dts-hd-ma": 200,
+      "truehd": 200,
+      "mainframe": 400,
       "bad-dual-groups": -500
     },
     "language_prefs": {
-      "preferred_audio": ["fr", "multi"],
-      "preferred_subs": ["fr", "none"],
-      "must_have_french_audio": false
+      "preferred_audio": [
+        "fr",
+        "multi",
+        "en"
+      ],
+      "preferred_subs": [
+        "fr",
+        "en",
+        "none"
+      ],
+      "must_have_french_audio": true
     },
     "constraints": {
       "min_score": null,
-      "max_size_gb": 25,
-      "ban_below": -2000
+      "max_size_gb": 50,
+      "ban_below": -1500
     },
     "weights": {
       "rtn_base": 0.0,
