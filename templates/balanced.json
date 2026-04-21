@@ -5,8 +5,8 @@
   "is_system": true,
   "config": {
     "scores": {
-      "fr-scene-groups": 500,
-      "french-lq-groups": -500,
+      "french-scene": 500,
+      "french-lq": -500,
       "x264": 300,
       "x265": 400,
       "1080p": 500,
@@ -16,14 +16,23 @@
       "web-tier-03": 200,
       "remux-tier-01": 800,
       "remux-tier-02": 600,
-      "hq-audio": 150,
-      "hq-release-groups": 300,
-      "low-quality-groups": -500,
+      "dts-hd-ma": 150,
+      "truehd": 150,
+      "mainframe": 300,
+      "lq": -500,
       "bad-dual-groups": -400
     },
     "language_prefs": {
-      "preferred_audio": ["fr", "multi", "en"],
-      "preferred_subs": ["fr", "en", "none"],
+      "preferred_audio": [
+        "fr",
+        "multi",
+        "en"
+      ],
+      "preferred_subs": [
+        "fr",
+        "en",
+        "none"
+      ],
       "must_have_french_audio": false
     },
     "constraints": {
