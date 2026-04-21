@@ -1,0 +1,44 @@
+{
+  "slug": "bluray-max",
+  "name": "Bluray Max Quality",
+  "description": "Max qualité Bluray remux peu importe la langue. HDR/DV préférés. Taille non-limitée.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "remux-tier-01": 3000,
+      "remux-tier-02": 2500,
+      "remux-tier-03": 2000,
+      "bluray-tier-01": 1500,
+      "bluray-tier-02": 1000,
+      "web-tier-01": 500,
+      "web-tier-02": 200,
+      "2160p": 800,
+      "1080p": 400,
+      "hdr10plus": 1000,
+      "dolby-vision": 1200,
+      "hdr10": 600,
+      "hdr": 300,
+      "atmos": 400,
+      "truehd": 400,
+      "dts-hd-ma": 400,
+      "dts-x": 400,
+      "hq-release-groups": 800,
+      "low-quality-groups": -1000
+    },
+    "language_prefs": {
+      "preferred_audio": [],
+      "preferred_subs": [],
+      "must_have_french_audio": false
+    },
+    "constraints": {
+      "min_score": null,
+      "max_size_gb": null,
+      "ban_below": -2000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.0
+    }
+  }
+}

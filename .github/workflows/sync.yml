@@ -1,0 +1,63 @@
+name: Sync TRaSH Custom Formats
+
+on:
+  schedule:
+    - cron: '0 2 * * *'   # Daily at 02:00 UTC
+  workflow_dispatch: {}    # Manual trigger
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trash-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout mirror
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Clone TRaSH Guides (sparse)
+        run: |
+          set -euo pipefail
+          rm -rf upstream
+          git clone --depth 1 \
+            --filter=blob:none \
+            --sparse \
+            https://github.com/TRaSH-Guides/Guides.git upstream
+          cd upstream
+          git sparse-checkout init --cone
+          git sparse-checkout set docs/json/radarr/cf docs/json/sonarr/cf
+          echo "UPSTREAM_SHA=$(git rev-parse --short HEAD)" >> "$GITHUB_ENV"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Filter CFs, regenerate templates, write metadata
+        run: python3 .github/scripts/sync.py
+
+      - name: Commit and push if changed
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "chore(sync): TRaSH upstream ${UPSTREAM_SHA} - $(date -u +%Y%m%dT%H%M%SZ)"
+          git push
+
+      - name: Upload metadata as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: metadata
+          path: metadata.json

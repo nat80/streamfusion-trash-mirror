@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.claude/
+.kilo/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CI work dir
+/Guides/

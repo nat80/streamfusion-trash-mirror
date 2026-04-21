@@ -1,0 +1,38 @@
+{
+  "slug": "french-hd",
+  "name": "French HD (1080p)",
+  "description": "Priorité aux releases françaises 1080p : VFF/TRUEFRENCH, x264, Bluray/WEB-DL. Idéal pour qualité équilibrée sans 4K.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "fr-scene-groups": 2000,
+      "french-lq-groups": -1000,
+      "x264": 500,
+      "x265": 100,
+      "1080p": 300,
+      "2160p": -500,
+      "web-tier-01": 800,
+      "web-tier-02": 500,
+      "remux-tier-01": 1000,
+      "remux-tier-02": 700,
+      "hq-audio": 200,
+      "hq-release-groups": 400,
+      "bad-dual-groups": -500
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "constraints": {
+      "min_score": null,
+      "max_size_gb": 25,
+      "ban_below": -2000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.5
+    }
+  }
+}

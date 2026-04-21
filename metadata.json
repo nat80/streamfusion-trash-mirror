@@ -1,0 +1,13 @@
+{
+  "version": "bootstrap",
+  "synced_at": "1970-01-01T00:00:00Z",
+  "upstream_sha": "",
+  "cf_count": 0,
+  "cf_count_radarr": 0,
+  "cf_count_sonarr": 0,
+  "template_count": 0,
+  "keep_patterns": [],
+  "exclude_patterns": [],
+  "whitelist_extra": [],
+  "blacklist_extra": []
+}
