@@ -1,0 +1,58 @@
+{
+  "slug": "remux-cinephile",
+  "name": "Remux Cinéphile (Qualité Absolue)",
+  "description": "Pour les puristes : seul le meilleur compte. Remux Bluray (UHD ou HD) des groupes les mieux notés (Remux Tier 01-03, UHD/HD Bluray Tier 01-03, versions FR incluses). HDR/DV et audio lossless (TrueHD ATMOS, DTS-X, DTS-HD MA) fortement valorisés. Aucune restriction de langue ou de taille.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "remux-tier-01":           3500,
+      "remux-tier-02":           3000,
+      "remux-tier-03":           2500,
+      "fr-remux-tier-01":        3000,
+      "fr-remux-tier-02":        2500,
+      "uhd-bluray-tier-01":      2500,
+      "uhd-bluray-tier-02":      2000,
+      "uhd-bluray-tier-03":      1500,
+      "fr-uhd-bluray-tier-01":   2500,
+      "fr-uhd-bluray-tier-02":   2000,
+      "hd-bluray-tier-01":       2000,
+      "hd-bluray-tier-02":       1500,
+      "hd-bluray-tier-03":       1000,
+      "fr-hd-bluray-tier-01":    2000,
+      "fr-hd-bluray-tier-02":    1500,
+      "web-tier-01":              500,
+      "web-tier-02":              300,
+      "2160p":                   1200,
+      "1080p":                    600,
+      "dv-boost":                1500,
+      "hdr10-boost":             1200,
+      "hdr":                      700,
+      "truehd-atmos":             600,
+      "dts-x":                    500,
+      "truehd":                   500,
+      "dts-hd-ma":                500,
+      "x265":                     400,
+      "x264":                     200,
+      "multi":                    400,
+      "vff":                      300,
+      "lq":                     -2000,
+      "bad-dual-groups":         -500,
+      "obfuscated":              -300
+    },
+    "language_prefs": {
+      "preferred_audio": [],
+      "preferred_subs": [],
+      "must_have_french_audio": false
+    },
+    "constraints": {
+      "min_score": null,
+      "max_size_gb": null,
+      "ban_below": -2000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.1
+    }
+  }
+}

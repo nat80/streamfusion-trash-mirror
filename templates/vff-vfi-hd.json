@@ -1,0 +1,53 @@
+{
+  "slug": "vff-vfi-hd",
+  "name": "VFF/VFI HD (1080p Priorité)",
+  "description": "Idéal si vous voulez du doublage français intégral (VFF ou VFI) en 1080p. Favorise les encodeurs x265 et les groupes FR reconnus (FR HD Bluray/Remux/WEB Tier 01-02). Le 4K est pénalisé pour rester sur de la HD. Taille limitée à 30 Go.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vff":                     3000,
+      "vfi":                     2500,
+      "vf2":                      800,
+      "multi":                   1200,
+      "fr-scene-groups":         1500,
+      "fr-remux-tier-01":        2000,
+      "fr-remux-tier-02":        1600,
+      "fr-hd-bluray-tier-01":    2200,
+      "fr-hd-bluray-tier-02":    1800,
+      "fr-web-tier-01":          1400,
+      "fr-web-tier-02":          1000,
+      "remux-tier-01":            800,
+      "remux-tier-02":            600,
+      "hd-bluray-tier-01":        700,
+      "hd-bluray-tier-02":        500,
+      "web-tier-01":              500,
+      "web-tier-02":              300,
+      "1080p":                   1000,
+      "2160p":                   -800,
+      "720p":                    -300,
+      "x265-hd":                  700,
+      "x265":                     600,
+      "x264":                     400,
+      "fr-lq":                  -1500,
+      "lq":                     -2000,
+      "lq-release-title":       -1500,
+      "bad-dual-groups":         -800,
+      "obfuscated":              -500
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "constraints": {
+      "min_score": null,
+      "max_size_gb": 30,
+      "ban_below": -2000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.8
+    }
+  }
+}

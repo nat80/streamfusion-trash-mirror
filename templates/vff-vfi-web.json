@@ -1,0 +1,52 @@
+{
+  "slug": "vff-vfi-web",
+  "name": "VFF/VFI WEB Compact (≤15 Go)",
+  "description": "Doublage français (VFF/VFI) sur sources WEB-DL uniquement, en 1080p. Encode x265 fortement valorisé pour réduire la taille. Tiers WEB FR (Tier 01-03) en priorité. Limite stricte de 15 Go. Idéal pour espace disque limité ou accès rapide.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vff":                     3000,
+      "vfi":                     2500,
+      "vf2":                      800,
+      "multi":                   1200,
+      "fr-scene-groups":         1000,
+      "fr-web-tier-01":          2200,
+      "fr-web-tier-02":          1800,
+      "fr-web-tier-03":          1200,
+      "fr-hd-bluray-tier-01":     800,
+      "fr-hd-bluray-tier-02":     600,
+      "web-tier-01":             1000,
+      "web-tier-02":              700,
+      "web-tier-03":              400,
+      "hd-bluray-tier-01":        500,
+      "hd-bluray-tier-02":        300,
+      "1080p":                   1000,
+      "2160p":                   -500,
+      "720p":                    -200,
+      "x265-hd":                  900,
+      "x265":                     800,
+      "x264":                     200,
+      "x265-no-hdr-dv":           700,
+      "fr-lq":                  -1500,
+      "lq":                     -2000,
+      "lq-release-title":       -1500,
+      "bad-dual-groups":         -800,
+      "obfuscated":              -500
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "constraints": {
+      "min_score": null,
+      "max_size_gb": 15,
+      "ban_below": -2000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.8
+    }
+  }
+}

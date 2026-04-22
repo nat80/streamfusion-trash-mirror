@@ -1,0 +1,52 @@
+{
+  "slug": "vostfr-hd",
+  "name": "VOSTFR HD (VO + Sous-titres FR)",
+  "description": "Pour le contenu sans doublage français disponible : VO audio (anglais, japonais…) avec sous-titres français intégrés. VOSTFR et Language: Original+French fortement valorisés. VFF/VFI pénalisés légèrement (car inutiles ici). 1080p focus, x265 favorisé, limite 30 Go.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vostfr":                  3000,
+      "vfq":                     1500,
+      "vof":                     1200,
+      "multi":                   1000,
+      "language-original-french":2000,
+      "fr-hd-bluray-tier-01":    1500,
+      "fr-hd-bluray-tier-02":    1200,
+      "fr-web-tier-01":          1500,
+      "fr-web-tier-02":          1200,
+      "hd-bluray-tier-01":       1200,
+      "hd-bluray-tier-02":        900,
+      "web-tier-01":             1000,
+      "web-tier-02":              700,
+      "web-tier-03":              400,
+      "1080p":                   1000,
+      "2160p":                    400,
+      "720p":                    -200,
+      "x265-hd":                  800,
+      "x265":                     700,
+      "x264":                     400,
+      "vff":                     -500,
+      "vfi":                     -300,
+      "fr-lq":                  -1500,
+      "lq":                     -2000,
+      "lq-release-title":       -1200,
+      "bad-dual-groups":         -600,
+      "obfuscated":              -400
+    },
+    "language_prefs": {
+      "preferred_audio": ["en", "ja", "multi"],
+      "preferred_subs": ["fr"],
+      "must_have_french_audio": false
+    },
+    "constraints": {
+      "min_score": null,
+      "max_size_gb": 30,
+      "ban_below": -2000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.3
+    }
+  }
+}

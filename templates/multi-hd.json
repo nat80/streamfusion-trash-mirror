@@ -1,0 +1,54 @@
+{
+  "slug": "multi-hd",
+  "name": "MULTi HD (1080p Bilingue)",
+  "description": "Pour les releases bilingues FR+VO en 1080p. Favorise le MULTi (les deux pistes audio) puis VFF/VFI. Tiers FR HD Bluray/WEB et tiers globaux inclus. Limite 35 Go. Idéal pour les films avec une VO intéressante.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "multi":                   2500,
+      "language-original-french":2000,
+      "vff":                     1200,
+      "vfi":                     1000,
+      "vf2":                      600,
+      "fr-scene-groups":         1000,
+      "fr-remux-tier-01":        1200,
+      "fr-remux-tier-02":         900,
+      "fr-hd-bluray-tier-01":    1500,
+      "fr-hd-bluray-tier-02":    1200,
+      "fr-web-tier-01":          1100,
+      "fr-web-tier-02":           800,
+      "remux-tier-01":            900,
+      "remux-tier-02":            700,
+      "hd-bluray-tier-01":        900,
+      "hd-bluray-tier-02":        700,
+      "web-tier-01":              600,
+      "web-tier-02":              400,
+      "1080p":                   1000,
+      "2160p":                   -300,
+      "720p":                    -300,
+      "x265-hd":                  600,
+      "x265":                     500,
+      "x264":                     300,
+      "fr-lq":                  -1000,
+      "lq":                     -2000,
+      "lq-release-title":       -1200,
+      "bad-dual-groups":         -600,
+      "obfuscated":              -400
+    },
+    "language_prefs": {
+      "preferred_audio": ["multi", "fr", "en"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "constraints": {
+      "min_score": null,
+      "max_size_gb": 35,
+      "ban_below": -2000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.5
+    }
+  }
+}

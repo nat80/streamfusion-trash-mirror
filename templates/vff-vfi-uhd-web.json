@@ -1,0 +1,54 @@
+{
+  "slug": "vff-vfi-uhd-web",
+  "name": "VFF/VFI UHD WEB (2160p Streaming)",
+  "description": "4K VFF/VFI depuis les plateformes de streaming (NF, AMZN, DSNP, HBO, ATVP…). Favorise les tiers WEB FR (Tier 01-02) et WEB globaux. HDR10+/Dolby Vision valorisé. Encode x265. Distinct du template UHD global qui inclut aussi les Bluray physiques. Taille illimitée.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vff":                     3000,
+      "vfi":                     2500,
+      "vf2":                      800,
+      "multi":                   1500,
+      "fr-web-tier-01":          2500,
+      "fr-web-tier-02":          2000,
+      "fr-scene-groups":         1200,
+      "web-tier-01":             1500,
+      "web-tier-02":             1200,
+      "web-tier-03":              800,
+      "nf":                       400,
+      "amzn":                     400,
+      "dsnp":                     400,
+      "hbo":                      400,
+      "atvp":                     400,
+      "2160p":                   1500,
+      "1080p":                    200,
+      "720p":                    -500,
+      "x265":                    1000,
+      "x265-hd":                  600,
+      "x264":                    -200,
+      "dv-boost":                1200,
+      "hdr10-boost":              800,
+      "hdr":                      400,
+      "fr-lq":                  -1500,
+      "lq":                     -2000,
+      "lq-release-title":       -1500,
+      "bad-dual-groups":         -800,
+      "obfuscated":              -500
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "constraints": {
+      "min_score": null,
+      "max_size_gb": null,
+      "ban_below": -2000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.8
+    }
+  }
+}
