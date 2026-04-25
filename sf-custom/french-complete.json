@@ -1,0 +1,16 @@
+{
+  "trash_id": "da61cc75771c414cabe99d332223c95f",
+  "name": "French Complete / Intégrale",
+  "description": "Packs complets de saisons ou intégrales de séries : INTEGRALE, COMPLETE, SAISONS.COMPLETES. Utile pour identifier les packs entiers et les scorer différemment des épisodes simples — notamment pour contourner les size_rules qui ne s'appliquent pas aux intégrales. SF-custom : tag de la scène FR absent du catalogue TRaSH.",
+  "specifications": [
+    {
+      "name": "INTEGRALE / COMPLETE pattern",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": "\\b(?:INTEGRALE?|iNTEGRALE?|COMPLETE(?:\\.SERIES|\\.SAISONS?)?|SAISONS?\\.COMPLETE[S]?|FULL\\.SERIES|FULL\\.SAISON[S]?)\\b"
+      }
+    }
+  ]
+}

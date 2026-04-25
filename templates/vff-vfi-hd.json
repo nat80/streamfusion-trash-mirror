@@ -1,12 +1,13 @@
 {
   "slug": "vff-vfi-hd",
   "name": "VFF/VFI HD (1080p Priorité)",
-  "description": "Idéal si vous voulez du doublage français intégral (VFF ou VFI) en 1080p. Favorise les encodeurs x265 et les groupes FR reconnus (FR HD Bluray/Remux/WEB Tier 01-02). Le 4K est pénalisé pour rester sur de la HD. Taille limitée à 30 Go.",
+  "description": "Idéal si vous voulez du doublage français intégral (VFF ou VFI) en 1080p. Favorise les encodeurs x265 et les groupes FR reconnus (FR HD Bluray/Remux/WEB Tier 01-02). Le 4K est pénalisé pour rester sur de la HD. Taille limitée à 20 Go.",
   "is_system": true,
   "config": {
     "scores": {
       "vff":                     3000,
       "vfi":                     2500,
+      "vfq":                      500,
       "vf2":                      800,
       "multi":                   1200,
       "fr-scene-groups":         1500,
@@ -28,26 +29,41 @@
       "x265-hd":                  700,
       "x265":                     600,
       "x264":                     400,
+      "french-complete":          400,
+      "repack-proper":            200,
+      "retail-fr":                500,
+      "scene-fr-audio-tag":       400,
+      "hd-light":                -200,
+      "4k-light":                -400,
+      "cam":                   -10000,
       "fr-lq":                  -1500,
       "lq":                     -2000,
       "lq-release-title":       -1500,
       "bad-dual-groups":         -800,
       "obfuscated":              -500
     },
-    "language_prefs": {
-      "preferred_audio": ["fr", "multi"],
-      "preferred_subs": ["fr", "none"],
-      "must_have_french_audio": false
-    },
     "constraints": {
-      "min_score": null,
-      "max_size_gb": 30,
-      "ban_below": -2000
+      "relegate_below": -1000,
+      "remove_below": -8000
     },
     "weights": {
       "rtn_base": 0.0,
       "cf_score": 1.0,
       "language_bonus": 0.8
-    }
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "remux",  "resolution": null,    "min_gb": 10,   "max_gb": 20,   "behavior": "relegate" },
+      { "source": "bluray", "resolution": null,    "min_gb": 4,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": "2160p", "min_gb": 10,   "max_gb": 20,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": null,    "min_gb": 2,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 1,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 1,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
   }
 }

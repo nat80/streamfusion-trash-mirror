@@ -1,0 +1,16 @@
+{
+  "trash_id": "472dd4797d6b4c1bae6ca1362ad7e9aa",
+  "name": "REPACK / PROPER",
+  "description": "Releases de correction : REPACK (remplacement d'une release défectueuse par le même groupe) et PROPER (correction par un autre groupe). Indicateur de qualité positif — la release a été corrigée suite à un problème connu. Léger bonus recommandé dans les templates. SF-custom : absent du catalogue TRaSH officiel en CF dédié.",
+  "specifications": [
+    {
+      "name": "REPACK / PROPER pattern",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": "\\b(?:REPACK|PROPER|RERIP|REAL\\.PROPER|REAL\\.REPACK)\\b"
+      }
+    }
+  ]
+}

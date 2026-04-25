@@ -1,0 +1,65 @@
+{
+  "slug": "multi-4k-light",
+  "name": "MULTi 4KLight (2160p Bilingue Compact)",
+  "description": "Releases bilingues (FR+VO) en 2160p 4KLight. Compact pour la 4K avec les deux pistes audio. Encode x265. Sources WEB 4K prioritaires. Fichiers < 12 Go, sans minimum de taille.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "multi":                  2500,
+      "language-original-french":1800,
+      "vff":                    1000,
+      "vfi":                     800,
+      "vfq":                     800,
+      "vf2":                     500,
+      "fr-scene-groups":         800,
+      "fr-web-tier-01":         1800,
+      "fr-web-tier-02":         1400,
+      "web-tier-01":            1500,
+      "web-tier-02":            1200,
+      "web-tier-03":             800,
+      "nf":                      300,
+      "amzn":                    300,
+      "dsnp":                    300,
+      "2160p":                  1500,
+      "1080p":                  -500,
+      "720p":                   -800,
+      "4k-light":               2000,
+      "x265":                   1200,
+      "x265-no-hdr-dv":         1000,
+      "x264":                   -300,
+      "hd-light":               -800,
+      "hdr":                     200,
+      "french-complete":         300,
+      "repack-proper":           200,
+      "retail-fr":               300,
+      "scene-fr-audio-tag":      200,
+      "cam":                  -10000,
+      "fr-lq":                 -1000,
+      "lq":                    -2000,
+      "lq-release-title":      -1200,
+      "bad-dual-groups":        -600,
+      "obfuscated":             -400
+    },
+    "constraints": {
+      "relegate_below": -1000,
+      "remove_below": -8000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.5
+    },
+    "language_prefs": {
+      "preferred_audio": ["multi", "fr", "en"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": null, "min_gb": null, "max_gb": 12,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null, "min_gb": null, "max_gb": 10,   "behavior": "relegate" },
+      { "source": "bluray", "resolution": null, "min_gb": null, "max_gb": 12,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null, "min_gb": null, "max_gb": 8,    "behavior": "relegate" },
+      { "source": "default","resolution": null, "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
+  }
+}

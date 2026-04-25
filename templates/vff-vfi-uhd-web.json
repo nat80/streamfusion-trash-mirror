@@ -1,7 +1,7 @@
 {
   "slug": "vff-vfi-uhd-web",
   "name": "VFF/VFI UHD WEB (2160p Streaming)",
-  "description": "4K VFF/VFI depuis les plateformes de streaming (NF, AMZN, DSNP, HBO, ATVP…). Favorise les tiers WEB FR (Tier 01-02) et WEB globaux. HDR10+/Dolby Vision valorisé. Encode x265. Distinct du template UHD global qui inclut aussi les Bluray physiques. Taille illimitée.",
+  "description": "4K VFF/VFI depuis les plateformes de streaming (NF, AMZN, DSNP, HBO, ATVP…). Favorise les tiers WEB FR (Tier 01-02) et WEB globaux. HDR10+/Dolby Vision valorisé. Encode x265. Distinct du template UHD global qui inclut aussi les Bluray physiques. Taille non limitée, releases hors norme releguées.",
   "is_system": true,
   "config": {
     "scores": {
@@ -29,26 +29,38 @@
       "dv-boost":                1200,
       "hdr10-boost":              800,
       "hdr":                      400,
+      "french-complete":          400,
+      "repack-proper":            200,
+      "retail-fr":                200,
+      "scene-fr-audio-tag":       300,
+      "hd-light":                -500,
+      "4k-light":                 500,
+      "cam":                   -10000,
       "fr-lq":                  -1500,
       "lq":                     -2000,
       "lq-release-title":       -1500,
       "bad-dual-groups":         -800,
       "obfuscated":              -500
     },
-    "language_prefs": {
-      "preferred_audio": ["fr", "multi"],
-      "preferred_subs": ["fr", "none"],
-      "must_have_french_audio": false
-    },
     "constraints": {
-      "min_score": null,
-      "max_size_gb": null,
-      "ban_below": -2000
+      "relegate_below": -1000,
+      "remove_below": -8000
     },
     "weights": {
       "rtn_base": 0.0,
       "cf_score": 1.0,
       "language_bonus": 0.8
-    }
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": null,    "min_gb": 5,    "max_gb": 60,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 5,    "max_gb": 40,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 5,    "max_gb": 30,   "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
   }
 }

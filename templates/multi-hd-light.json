@@ -1,0 +1,66 @@
+{
+  "slug": "multi-hd-light",
+  "name": "MULTi HDLight (1080p Bilingue Compact)",
+  "description": "Releases bilingues (FR+VO) en 1080p HDLight. Compact et efficace pour les médiathèques avec les deux pistes audio. Encode x265. Groupes FR WEB Tier 01-02 et tiers globaux. Fichiers < 12 Go, sans minimum de taille.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "multi":                  2500,
+      "language-original-french":1800,
+      "vff":                    1000,
+      "vfi":                     800,
+      "vfq":                     800,
+      "vf2":                     500,
+      "fr-scene-groups":         800,
+      "fr-web-tier-01":         1500,
+      "fr-web-tier-02":         1200,
+      "fr-hd-bluray-tier-01":    800,
+      "fr-hd-bluray-tier-02":    600,
+      "web-tier-01":            1200,
+      "web-tier-02":             900,
+      "web-tier-03":             600,
+      "hd-bluray-tier-01":       500,
+      "hd-bluray-tier-02":       300,
+      "1080p":                  1000,
+      "2160p":                  -800,
+      "720p":                   -200,
+      "hd-light":               2000,
+      "x265-hd":                1200,
+      "x265":                   1000,
+      "x264":                    500,
+      "x265-no-hdr-dv":          800,
+      "4k-light":               -800,
+      "french-complete":         300,
+      "repack-proper":           200,
+      "retail-fr":               300,
+      "scene-fr-audio-tag":      200,
+      "cam":                  -10000,
+      "fr-lq":                 -1000,
+      "lq":                    -2000,
+      "lq-release-title":      -1200,
+      "bad-dual-groups":        -600,
+      "obfuscated":             -400
+    },
+    "constraints": {
+      "relegate_below": -1000,
+      "remove_below": -8000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.5
+    },
+    "language_prefs": {
+      "preferred_audio": ["multi", "fr", "en"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": null, "min_gb": null, "max_gb": 12,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null, "min_gb": null, "max_gb": 10,   "behavior": "relegate" },
+      { "source": "bluray", "resolution": null, "min_gb": null, "max_gb": 12,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null, "min_gb": null, "max_gb": 8,    "behavior": "relegate" },
+      { "source": "default","resolution": null, "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
+  }
+}

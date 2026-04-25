@@ -1,0 +1,16 @@
+{
+  "trash_id": "3634efd27d01406fa5aef54c6b9dc892",
+  "name": "HD Light",
+  "description": "Encodages légers 1080p/720p de la scène française : HDLight, miniHD, microHD, mHD, 1080p.Light. Fichiers de taille réduite (2-8 Go typiquement). Qualité vidéo inférieure à un encode WEB-DL standard malgré la résolution HD. SF-custom : terminologie propre à la scène FR, absente du catalogue TRaSH.",
+  "specifications": [
+    {
+      "name": "HDLight / miniHD / mHD pattern",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": "\\b(?:HDLight|HD[-. ]?Light|1080p[-. ]?Light|720p[-. ]?Light|miniHD|mini[-. ]?HD|microHD|micro[-. ]?HD|mHD|m[-. ]?HD)\\b"
+      }
+    }
+  ]
+}

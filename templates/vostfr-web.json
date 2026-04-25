@@ -1,0 +1,65 @@
+{
+  "slug": "vostfr-web",
+  "name": "VOSTFR WEB (VO Streaming + ST FR)",
+  "description": "Contenu original (VO) avec sous-titres français depuis les plateformes de streaming. VOSTFR et VO+FR fortement valorisés. WEB-DL uniquement — pas de Bluray. VFF/VFI légèrement pénalisés. Idéal pour les séries US/UK ou animés avec subs FR. Limite 15 Go.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vostfr":                 3000,
+      "language-original-french":2000,
+      "vfq":                    1500,
+      "vof":                    1200,
+      "multi":                   800,
+      "fr-web-tier-01":         1800,
+      "fr-web-tier-02":         1400,
+      "web-tier-01":            1500,
+      "web-tier-02":            1200,
+      "web-tier-03":             800,
+      "nf":                      400,
+      "amzn":                    400,
+      "dsnp":                    400,
+      "hbo":                     400,
+      "atvp":                    400,
+      "1080p":                  1000,
+      "2160p":                   400,
+      "720p":                   -200,
+      "x265-hd":                 700,
+      "x265":                    600,
+      "x264":                    400,
+      "vff":                    -400,
+      "vfi":                    -200,
+      "french-complete":         300,
+      "repack-proper":           200,
+      "scene-fr-audio-tag":     -300,
+      "hd-light":               -100,
+      "4k-light":               -200,
+      "cam":                  -10000,
+      "fr-lq":                 -1500,
+      "lq":                    -2000,
+      "lq-release-title":      -1200,
+      "bad-dual-groups":        -600,
+      "obfuscated":             -400
+    },
+    "constraints": {
+      "relegate_below": -1000,
+      "remove_below": -8000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.3
+    },
+    "language_prefs": {
+      "preferred_audio": ["en", "ja", "multi"],
+      "preferred_subs": ["fr"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": "2160p", "min_gb": 5,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": null,    "min_gb": 2,    "max_gb": 15,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 1,    "max_gb": 12,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 1,    "max_gb": 8,    "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
+  }
+}

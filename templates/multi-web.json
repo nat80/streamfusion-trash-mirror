@@ -1,0 +1,67 @@
+{
+  "slug": "multi-web",
+  "name": "MULTi WEB (Bilingue Streaming)",
+  "description": "Releases bilingues (FR+VO) depuis les plateformes de streaming uniquement. MULTi prioritaire, VFF/VFI bien scorés. Tiers WEB FR et WEB globaux. Pas de Bluray. Idéal pour récupérer les deux pistes audio depuis NF, AMZN, DSNP, HBO… Limite 20 Go.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "multi":                  2500,
+      "language-original-french":1800,
+      "vff":                    1200,
+      "vfi":                    1000,
+      "vfq":                     800,
+      "vf2":                     600,
+      "fr-scene-groups":         800,
+      "fr-web-tier-01":         2000,
+      "fr-web-tier-02":         1600,
+      "fr-web-tier-03":         1000,
+      "web-tier-01":            1500,
+      "web-tier-02":            1200,
+      "web-tier-03":             800,
+      "nf":                      400,
+      "amzn":                    400,
+      "dsnp":                    400,
+      "hbo":                     400,
+      "atvp":                    400,
+      "1080p":                  1000,
+      "2160p":                   500,
+      "720p":                   -300,
+      "x265-hd":                 700,
+      "x265":                    600,
+      "x264":                    400,
+      "french-complete":         300,
+      "repack-proper":           200,
+      "retail-fr":               300,
+      "scene-fr-audio-tag":      300,
+      "hd-light":               -200,
+      "4k-light":               -200,
+      "cam":                  -10000,
+      "fr-lq":                 -1500,
+      "lq":                    -2000,
+      "lq-release-title":      -1200,
+      "bad-dual-groups":        -600,
+      "obfuscated":             -400
+    },
+    "constraints": {
+      "relegate_below": -1000,
+      "remove_below": -8000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.6
+    },
+    "language_prefs": {
+      "preferred_audio": ["multi", "fr", "en"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": "2160p", "min_gb": 5,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": null,    "min_gb": 2,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 1,    "max_gb": 15,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 1,    "max_gb": 10,   "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
+  }
+}

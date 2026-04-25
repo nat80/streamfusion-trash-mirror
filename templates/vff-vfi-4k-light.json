@@ -1,0 +1,65 @@
+{
+  "slug": "vff-vfi-4k-light",
+  "name": "VFF/VFI 4KLight (2160p Compact)",
+  "description": "Doublage français (VFF/VFI) en 2160p 4KLight — encode x265 compact. Idéal pour la 4K avec un stockage limité. Sources WEB 4K prioritaires (NF, AMZN, DSNP…). Fichiers < 12 Go, sans minimum de taille.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vff":                    3000,
+      "vfi":                    2500,
+      "vfq":                     500,
+      "vf2":                     400,
+      "multi":                  1200,
+      "fr-scene-groups":        1000,
+      "fr-web-tier-01":         2000,
+      "fr-web-tier-02":         1600,
+      "fr-web-tier-03":          800,
+      "web-tier-01":            1200,
+      "web-tier-02":             900,
+      "web-tier-03":             600,
+      "nf":                      300,
+      "amzn":                    300,
+      "dsnp":                    300,
+      "2160p":                  1500,
+      "1080p":                  -500,
+      "720p":                   -800,
+      "4k-light":               2000,
+      "x265":                   1200,
+      "x265-no-hdr-dv":         1000,
+      "x264":                   -300,
+      "hd-light":               -800,
+      "hdr":                     200,
+      "french-complete":         400,
+      "repack-proper":           200,
+      "retail-fr":               200,
+      "scene-fr-audio-tag":      300,
+      "cam":                  -10000,
+      "fr-lq":                 -1500,
+      "lq":                    -2000,
+      "lq-release-title":      -1500,
+      "bad-dual-groups":        -800,
+      "obfuscated":             -500
+    },
+    "constraints": {
+      "relegate_below": -1000,
+      "remove_below": -8000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.8
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": null, "min_gb": null, "max_gb": 12,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null, "min_gb": null, "max_gb": 10,   "behavior": "relegate" },
+      { "source": "bluray", "resolution": null, "min_gb": null, "max_gb": 12,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null, "min_gb": null, "max_gb": 8,    "behavior": "relegate" },
+      { "source": "default","resolution": null, "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
+  }
+}

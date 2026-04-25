@@ -27,26 +27,40 @@
       "x264":                     400,
       "vff":                     -500,
       "vfi":                     -300,
+      "french-complete":          300,
+      "repack-proper":            200,
+      "scene-fr-audio-tag":      -400,
+      "hd-light":                -200,
+      "4k-light":                -300,
+      "cam":                   -10000,
       "fr-lq":                  -1500,
       "lq":                     -2000,
       "lq-release-title":       -1200,
       "bad-dual-groups":         -600,
       "obfuscated":              -400
     },
-    "language_prefs": {
-      "preferred_audio": ["en", "ja", "multi"],
-      "preferred_subs": ["fr"],
-      "must_have_french_audio": false
-    },
     "constraints": {
-      "min_score": null,
-      "max_size_gb": 30,
-      "ban_below": -2000
+      "relegate_below": -1000,
+      "remove_below": -8000
     },
     "weights": {
       "rtn_base": 0.0,
       "cf_score": 1.0,
       "language_bonus": 0.3
-    }
+    },
+    "language_prefs": {
+      "preferred_audio": ["en", "ja", "multi"],
+      "preferred_subs": ["fr"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "remux",  "resolution": null,    "min_gb": 15,   "max_gb": 45,   "behavior": "relegate" },
+      { "source": "bluray", "resolution": null,    "min_gb": 15,   "max_gb": 40,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": "2160p", "min_gb": 10,   "max_gb": 30,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": null,    "min_gb": 5,    "max_gb": 30,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 3,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 2,    "max_gb": 15,   "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
   }
 }

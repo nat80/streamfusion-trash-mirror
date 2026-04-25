@@ -1,0 +1,16 @@
+{
+  "trash_id": "a89c06c9f4ab470caf4bc63550e3ae9e",
+  "name": "French Scene Audio Tag",
+  "description": "Tags audio spécifiques à la scène française absents de RTN : TRUEFRENCH (audio FR de première génération, meilleure qualité que VFF standard), VO+VFF, VF+VO (pistes multiples explicitement listées). Complète les CFs vff/vfi/multi de TRaSH pour les variantes de nommage propres à la scène FR. SF-custom.",
+  "specifications": [
+    {
+      "name": "TRUEFRENCH / VO+VFF pattern",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": "\\b(?:TRUEFRENCH|TRUE[-. ]?FRENCH|VO[-. ]?\\+[-. ]?VFF|VFF[-. ]?\\+[-. ]?VO|VF[-. ]?\\+[-. ]?VO|VO[-. ]?\\+[-. ]?VF|FRENCH[-. ]?RETAIL[-. ]?AUDIO)\\b"
+      }
+    }
+  ]
+}

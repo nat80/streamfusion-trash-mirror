@@ -1,0 +1,65 @@
+{
+  "slug": "anime-vostfr",
+  "name": "Animé VOSTFR (VO Japonaise + ST FR)",
+  "description": "Animé en version originale japonaise avec sous-titres français. Fansubs FR et groupes anime VOSTFR fortement valorisés. VFF/VFI pénalisés — pour les puristes qui veulent la VO japonaise avec subs FR. Encode x265. Limite 20 Go.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vostfr":                 3000,
+      "language-original-french":2000,
+      "vof":                    1200,
+      "vfq":                     800,
+      "multi":                   500,
+      "fr-anime-tier-01":       2500,
+      "fr-anime-tier-02":       2000,
+      "fr-anime-tier-03":       1500,
+      "fr-anime-fansub":        2000,
+      "anime-bd-tier-01":       1200,
+      "anime-bd-tier-02":        900,
+      "anime-bd-tier-03":        700,
+      "anime-web-tier-01":      1000,
+      "anime-web-tier-02":       800,
+      "1080p":                  1000,
+      "720p":                    400,
+      "2160p":                   500,
+      "x265":                   1200,
+      "x265-hd":                 800,
+      "x264":                    400,
+      "vff":                    -500,
+      "vfi":                    -300,
+      "french-complete":         400,
+      "repack-proper":           200,
+      "scene-fr-audio-tag":     -400,
+      "hd-light":               -100,
+      "4k-light":               -300,
+      "cam":                  -10000,
+      "anime-lq-groups":       -2000,
+      "anime-raws":            -1000,
+      "fr-lq":                 -1500,
+      "lq":                    -2000,
+      "bad-dual-groups":        -800,
+      "obfuscated":             -500
+    },
+    "constraints": {
+      "relegate_below": -800,
+      "remove_below": -8000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.4
+    },
+    "language_prefs": {
+      "preferred_audio": ["ja", "multi"],
+      "preferred_subs": ["fr"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": "2160p", "min_gb": 8,    "max_gb": 30,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": null,    "min_gb": 2,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 1,    "max_gb": 15,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 1,    "max_gb": 10,   "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
+  }
+}

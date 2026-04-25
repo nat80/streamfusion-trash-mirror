@@ -1,0 +1,16 @@
+{
+  "trash_id": "fb7af2a8242a4e2ca1686acce6c709e7",
+  "name": "4K Light",
+  "description": "Encodages légers 2160p de la scène française : 4KLight, UHDLight, 2160p.Light. Fichiers de taille réduite pour du 4K (15-30 Go typiquement), qualité inférieure à un encode WEB-DL ou BluRay UHD natif. À scorer séparément du HDLight car la résolution 4K reste supérieure. SF-custom : terminologie propre à la scène FR.",
+  "specifications": [
+    {
+      "name": "4KLight / UHDLight pattern",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": "\\b(?:4KLight|4K[-. ]?Light|UHDLight|UHD[-. ]?Light|2160p[-. ]?Light)\\b"
+      }
+    }
+  ]
+}

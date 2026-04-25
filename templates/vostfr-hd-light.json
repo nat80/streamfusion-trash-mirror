@@ -1,0 +1,61 @@
+{
+  "slug": "vostfr-hd-light",
+  "name": "VOSTFR HDLight (VO Compact + ST FR)",
+  "description": "VO avec sous-titres français en 1080p HDLight. Format compact pour les grandes médiathèques VOSTFR. Fansubs et groupes FR VOSTFR favorisés. Encode x265. Fichiers < 12 Go, sans minimum de taille.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vostfr":                 3000,
+      "language-original-french":2000,
+      "vof":                    1200,
+      "vfq":                    1000,
+      "multi":                   600,
+      "fr-web-tier-01":         1500,
+      "fr-web-tier-02":         1200,
+      "web-tier-01":            1200,
+      "web-tier-02":             900,
+      "web-tier-03":             600,
+      "1080p":                  1000,
+      "2160p":                  -500,
+      "720p":                   -200,
+      "hd-light":               2000,
+      "x265-hd":                1200,
+      "x265":                   1000,
+      "x264":                    500,
+      "x265-no-hdr-dv":          800,
+      "4k-light":               -800,
+      "vff":                    -400,
+      "vfi":                    -200,
+      "french-complete":         300,
+      "repack-proper":           200,
+      "scene-fr-audio-tag":     -300,
+      "cam":                  -10000,
+      "fr-lq":                 -1500,
+      "lq":                    -2000,
+      "lq-release-title":      -1200,
+      "bad-dual-groups":        -600,
+      "obfuscated":             -400
+    },
+    "constraints": {
+      "relegate_below": -1000,
+      "remove_below": -8000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.3
+    },
+    "language_prefs": {
+      "preferred_audio": ["en", "ja", "multi"],
+      "preferred_subs": ["fr"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": null, "min_gb": null, "max_gb": 12,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null, "min_gb": null, "max_gb": 10,   "behavior": "relegate" },
+      { "source": "bluray", "resolution": null, "min_gb": null, "max_gb": 12,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null, "min_gb": null, "max_gb": 8,    "behavior": "relegate" },
+      { "source": "default","resolution": null, "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
+  }
+}

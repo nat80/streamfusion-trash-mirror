@@ -1,0 +1,16 @@
+{
+  "trash_id": "c846580d0cc24ff49f3ccaf2386f4679",
+  "name": "CAM / Telecine",
+  "description": "Détecte les releases CAM, TS (Telesync), TC (Telecine) et assimilées — sources filmées en salle ou depuis une copie de travail. Qualité vidéo/audio très dégradée. SF-custom : absent du catalogue TRaSH car basé sur des patterns titre spécifiques aux releases francophones.",
+  "specifications": [
+    {
+      "name": "CAM / Telecine pattern",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": "\\b(?:CAM(?:RIP)?|HDCAM|HD[-. ]CAM|CAMHD|HDTS|HD[-. ]TS|TS[-. ]?RIP|TELESYNC|HD[-. ]?TELESYNC|TELECINE|HD[-. ]?TELECINE|PDVD|WORKPRINT)\\b"
+      }
+    }
+  ]
+}

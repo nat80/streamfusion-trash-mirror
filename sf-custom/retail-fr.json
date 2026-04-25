@@ -1,0 +1,16 @@
+{
+  "trash_id": "88eb56d19a284c8fbc24fc5d9effcf47",
+  "name": "French RETAIL",
+  "description": "Audio français issu d'un support physique officiel (RETAIL) : BD.FR, BluRay.FR, DVD.FR. Indique que la piste audio VFF/VFI provient d'un disque retail et non d'un rip de streaming ou d'un fansub. Garantit une qualité audio maximale pour les releases françaises. SF-custom : tag spécifique à la scène FR, absent du catalogue TRaSH.",
+  "specifications": [
+    {
+      "name": "RETAIL French audio pattern",
+      "implementation": "ReleaseTitleSpecification",
+      "negate": false,
+      "required": true,
+      "fields": {
+        "value": "\\b(?:RETAIL|BluRay\\.FR|BD\\.FR|DVD\\.FR|FR\\.BluRay|FR\\.BD|FR\\.DVD|BLURAY\\.FRENCH|FRENCH\\.BLURAY)\\b"
+      }
+    }
+  ]
+}

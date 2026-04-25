@@ -1,0 +1,64 @@
+{
+  "slug": "anime-hd-light",
+  "name": "Animé HDLight (1080p Compact)",
+  "description": "Animé en 1080p encodé HDLight — x265 compact pour les grandes médiathèques. VFF/VFI/VOSTFR acceptés sans distinction. Groupes anime FR valorisés. Fichiers < 10 Go, sans minimum de taille.",
+  "is_system": true,
+  "config": {
+    "scores": {
+      "vff":                    1500,
+      "vfi":                    1500,
+      "vostfr":                 1500,
+      "vfq":                    1000,
+      "multi":                  1200,
+      "fr-anime-tier-01":       2500,
+      "fr-anime-tier-02":       2000,
+      "fr-anime-tier-03":       1500,
+      "fr-anime-fansub":        1500,
+      "anime-bd-tier-01":       1200,
+      "anime-bd-tier-02":        900,
+      "anime-bd-tier-03":        700,
+      "anime-web-tier-01":      1000,
+      "anime-web-tier-02":       800,
+      "1080p":                  1000,
+      "720p":                    400,
+      "2160p":                  -300,
+      "hd-light":               2000,
+      "x265":                   1500,
+      "x265-hd":                1200,
+      "x264":                    600,
+      "x265-no-hdr-dv":         1000,
+      "4k-light":               -800,
+      "french-complete":         400,
+      "repack-proper":           200,
+      "scene-fr-audio-tag":      100,
+      "cam":                  -10000,
+      "anime-lq-groups":       -2000,
+      "anime-raws":            -1000,
+      "fr-lq":                 -1500,
+      "lq":                    -2000,
+      "bad-dual-groups":        -800,
+      "obfuscated":             -500
+    },
+    "constraints": {
+      "relegate_below": -800,
+      "remove_below": -8000
+    },
+    "weights": {
+      "rtn_base": 0.0,
+      "cf_score": 1.0,
+      "language_bonus": 0.5
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "ja", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": null, "min_gb": null, "max_gb": 10,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null, "min_gb": null, "max_gb": 8,    "behavior": "relegate" },
+      { "source": "bluray", "resolution": null, "min_gb": null, "max_gb": 10,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null, "min_gb": null, "max_gb": 6,    "behavior": "relegate" },
+      { "source": "default","resolution": null, "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
+  }
+}

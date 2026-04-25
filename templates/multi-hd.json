@@ -9,6 +9,7 @@
       "language-original-french":2000,
       "vff":                     1200,
       "vfi":                     1000,
+      "vfq":                      800,
       "vf2":                      600,
       "fr-scene-groups":         1000,
       "fr-remux-tier-01":        1200,
@@ -29,26 +30,41 @@
       "x265-hd":                  600,
       "x265":                     500,
       "x264":                     300,
+      "french-complete":          300,
+      "repack-proper":            200,
+      "retail-fr":                400,
+      "scene-fr-audio-tag":       300,
+      "hd-light":                -400,
+      "4k-light":                -300,
+      "cam":                   -10000,
       "fr-lq":                  -1000,
       "lq":                     -2000,
       "lq-release-title":       -1200,
       "bad-dual-groups":         -600,
       "obfuscated":              -400
     },
-    "language_prefs": {
-      "preferred_audio": ["multi", "fr", "en"],
-      "preferred_subs": ["fr", "none"],
-      "must_have_french_audio": false
-    },
     "constraints": {
-      "min_score": null,
-      "max_size_gb": 35,
-      "ban_below": -2000
+      "relegate_below": -1000,
+      "remove_below": -8000
     },
     "weights": {
       "rtn_base": 0.0,
       "cf_score": 1.0,
       "language_bonus": 0.5
-    }
+    },
+    "language_prefs": {
+      "preferred_audio": ["multi", "fr", "en"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "remux",  "resolution": null,    "min_gb": 20,   "max_gb": 50,   "behavior": "relegate" },
+      { "source": "bluray", "resolution": null,    "min_gb": 15,   "max_gb": 45,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": "2160p", "min_gb": 10,   "max_gb": 45,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": null,    "min_gb": 5,    "max_gb": 35,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 3,    "max_gb": 25,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 2,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
   }
 }

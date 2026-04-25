@@ -25,6 +25,13 @@
       "x265":                    1200,
       "x265-hd":                  800,
       "x264":                     400,
+      "french-complete":          500,
+      "repack-proper":            200,
+      "retail-fr":                200,
+      "scene-fr-audio-tag":       200,
+      "hd-light":                   0,
+      "4k-light":                -300,
+      "cam":                   -10000,
       "anime-lq-groups":        -2000,
       "anime-raws":             -1000,
       "fr-lq":                  -1500,
@@ -32,20 +39,26 @@
       "bad-dual-groups":         -800,
       "obfuscated":              -500
     },
-    "language_prefs": {
-      "preferred_audio": ["fr", "multi", "ja"],
-      "preferred_subs": ["fr", "none"],
-      "must_have_french_audio": false
-    },
     "constraints": {
-      "min_score": null,
-      "max_size_gb": 20,
-      "ban_below": -2000
+      "relegate_below": -800,
+      "remove_below": -8000
     },
     "weights": {
       "rtn_base": 0.0,
       "cf_score": 1.0,
       "language_bonus": 0.7
-    }
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi", "ja"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": "2160p", "min_gb": 8,    "max_gb": 30,   "behavior": "relegate" },
+      { "source": "web-dl", "resolution": null,    "min_gb": 2,    "max_gb": 20,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 1,    "max_gb": 15,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 1,    "max_gb": 10,   "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
   }
 }

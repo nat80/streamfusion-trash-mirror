@@ -7,6 +7,7 @@
     "scores": {
       "vff":                     3000,
       "vfi":                     2500,
+      "vfq":                      500,
       "vf2":                      800,
       "multi":                   1200,
       "fr-scene-groups":         1000,
@@ -27,26 +28,38 @@
       "x265":                     800,
       "x264":                     200,
       "x265-no-hdr-dv":           700,
+      "french-complete":          400,
+      "repack-proper":            200,
+      "retail-fr":                100,
+      "scene-fr-audio-tag":       300,
+      "hd-light":                 400,
+      "4k-light":                -500,
+      "cam":                   -10000,
       "fr-lq":                  -1500,
       "lq":                     -2000,
       "lq-release-title":       -1500,
       "bad-dual-groups":         -800,
       "obfuscated":              -500
     },
-    "language_prefs": {
-      "preferred_audio": ["fr", "multi"],
-      "preferred_subs": ["fr", "none"],
-      "must_have_french_audio": false
-    },
     "constraints": {
-      "min_score": null,
-      "max_size_gb": 15,
-      "ban_below": -2000
+      "relegate_below": -1000,
+      "remove_below": -8000
     },
     "weights": {
       "rtn_base": 0.0,
       "cf_score": 1.0,
       "language_bonus": 0.8
-    }
+    },
+    "language_prefs": {
+      "preferred_audio": ["fr", "multi"],
+      "preferred_subs": ["fr", "none"],
+      "must_have_french_audio": false
+    },
+    "size_rules": [
+      { "source": "web-dl", "resolution": null,    "min_gb": 2,    "max_gb": 15,   "behavior": "relegate" },
+      { "source": "webrip", "resolution": null,    "min_gb": 1,    "max_gb": 12,   "behavior": "relegate" },
+      { "source": "hdtv",   "resolution": null,    "min_gb": 1,    "max_gb": 10,   "behavior": "relegate" },
+      { "source": "default","resolution": null,    "min_gb": null, "max_gb": null, "behavior": "relegate" }
+    ]
   }
 }
