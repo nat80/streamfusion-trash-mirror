@@ -1,11 +1,11 @@
 {
-  "version": "c31e21d",
-  "synced_at": "2026-04-25T04:40:05Z",
-  "upstream_sha": "c31e21d",
+  "version": "dbf12c1",
+  "synced_at": "2026-04-26T05:16:04Z",
+  "upstream_sha": "dbf12c1",
   "cf_count": 296,
   "cf_count_radarr": 152,
   "cf_count_sonarr": 144,
-  "template_count": 10,
+  "template_count": 25,
   "keep_patterns": [
     "french-",
     "anime-",
