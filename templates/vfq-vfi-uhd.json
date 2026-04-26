@@ -59,7 +59,7 @@
     "language_prefs": {
       "preferred_audio": ["fr", "multi"],
       "preferred_subs": ["fr", "none"],
-      "must_have_french_audio": false
+      "must_have_french_audio": true
     },
     "size_rules": [
       { "source": "remux",  "resolution": null,    "min_gb": 15,   "max_gb": 50,   "behavior": "relegate" },
